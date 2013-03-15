@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Sweet Website</title>
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<!--defining width as user device; if user device is not user scalable set the minimum and maximum to 1.0/100% and remove scaling-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- allows you to set user device to 100%, allows you to create specific queries in css after standardising it -->
+		
+		<script type ="text/javascript" src="js/main.js"> </script>
+		
+	</head>
+	<body>
+	
+		<div id="page">
+		
+			<header class="content">
+				<h1>My Sweet Website <a href="#">the greatest ever &raquo;</a></h1>
+			</header>
+			<section class="content">
+				<article class="post">
+					<h2 onclick="hide('post-1');">A sample post title <em>Wednesday, August 29, 2012</em></h2>
+					<figure> <!--another entity, holds images + figcaption ie. description-->
+						<img src="img/10189114.jpg">
+					</figure>
+					<p id="post-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum libero sit amet eros porta placerat. Vestibulum eu magna quis ligula interdum tincidunt eu id nisi. Vestibulum lorem lectus, sollicitudin et egestas vel, suscipit at metus. Donec hendrerit dapibus sem et porta. Phasellus sit amet magna mi, sit amet sagittis libero. Aenean id dolor a nulla convallis fringilla eget congue ante. Donec rhoncus sollicitudin est, sed lobortis justo pellentesque sit amet. Phasellus pellentesque nisl eget odio facilisis non pharetra ipsum molestie. Nunc varius, nisl a auctor fringilla, nisi massa iaculis nisl, volutpat accumsan lectus risus quis enim. Phasellus bibendum neque blandit dolor venenatis rutrum.
+					</p>
+					<footer>A little bit of meta data in our life, Another little note</footer>
+				</article><!--.post-->
+				<article class="post">
+					<h2 onclick="hide('post-2');" >A sample post title <em>Wednesday, August 29, 2012</em></h2>
+					<figure> 
+						<img src="img/117144838.jpg">
+					</figure>
+					<p id="post-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum libero sit amet eros porta placerat. Vestibulum eu magna quis ligula interdum tincidunt eu id nisi. Vestibulum lorem lectus, sollicitudin et egestas vel, suscipit at metus. Donec hendrerit dapibus sem et porta. Phasellus sit amet magna mi, sit amet sagittis libero. Aenean id dolor a nulla convallis fringilla eget congue ante. Donec rhoncus sollicitudin est, sed lobortis justo pellentesque sit amet. Phasellus pellentesque nisl eget odio facilisis non pharetra ipsum molestie. Nunc varius, nisl a auctor fringilla, nisi massa iaculis nisl, volutpat accumsan lectus risus quis enim. Phasellus bibendum neque blandit dolor venenatis rutrum.
+					</p>
+					<footer>A little bit of meta data in our life, Another little note</footer>
+				</article><!--.post-->			
+			
+			</section><!-- .content -->
+			
+			<aside class="sidebar">
+				<section>
+					<h3>Other Content</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum libero sit amet eros porta placerat. </p>
+				</section>
+			
+				<p>	Some core values
+					<ul>
+						<li>Point #1</li>
+						<li>Point #2</li>
+						<li>Point #3</li>
+						<li>Point #4</li>
+						<li>Point #5</li>
+					</ul>
+				
+				</p>
+			</aside><!-- .sidebar -->
+		
+		</div><!-- #main -->
+	</body>
+</html>
+
+<!---
+make images scalable, fluid like site-->
+
+
+

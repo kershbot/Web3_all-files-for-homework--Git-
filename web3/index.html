@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brain and Emotions</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="" />
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        
+        <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="jquery.ad-gallery.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    $('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+    $('img.image1').data('ad-title', 'Title through $.data');
+    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+    var galleries = $('.ad-gallery').adGallery();
+    $('#switch-effect').change(
+      function() {
+        galleries[0].settings.effect = $(this).val();
+        return false;
+      }
+    );
+    $('#toggle-slideshow').click(
+      function() {
+        galleries[0].slideshow.toggle();
+        return false;
+      }
+    );
+    $('#toggle-description').click(
+      function() {
+        if(!galleries[0].settings.description_wrapper) {
+          galleries[0].settings.description_wrapper = $('#descriptions');
+        } else {
+          galleries[0].settings.description_wrapper = false;
+        }
+        return false;
+      }
+    );
+  });
+  </script>
+
+    </head>
+    
+    <body>
+	    <nav>
+	    	<ul class="nav">
+	    		<li><a href="#section4">Step Three: Communication</a></li>
+	             <li><a href="#section3">Step Two: Code</a></li>
+	             <li><a href="#section2">Step One: MindFlex</a></li>
+	             <li><a href="#section1">The Project</a></li>
+	         </ul>
+	    </nav>
+	    <div id="content-wrapper">
+			<div class="section black" id="section1">
+	            <h1>What is this tutorial about?</h1>
+	            <h2> This tutorial goes through the steps of how to create your own wearable EEG brain reader by hacking an existing invention and using the arduino hardware and software to extract data. This was created through the documentation of a project from fall 2012. The goal of the project was too collect information about a persons meditative or attention qualities while watching a lesson within a plant surrounded environment. </h2>  	                       
+	 
+	    <div class="img">
+   <img src="images/into.png" width="260px" alt ="plants" align="left"></div>
+   <div class="img">
+   <div class="img">
+   <img src="images/mindflex.jpeg" width="260px" alt ="plants" align="left"></div>
+
+
+</div>
+	        
+	        <div class="section white" id="section2">
+	      <h1>MindFlex Design</h1>
+	            		<p><h2>
+	        
+We will be using the MindFlex hardware from the Mattel toy company. This toy reads raw EEG signals which then controls a balls action within the game. The key is the Nueroscky chip which is within the Mindflex headgear. There is a pin which you can connect the arduino to receive the data on your computer. The arduino must have its own power source separate from the Mindflex. I then used the brain library, to test the serial read of the EEG reader. Once I got that to work I augmented the example code to make an LED light blink based on the signal strength of the attention information signal. 
+	            		</h2></p>
+	           			
+	           			<p style="text-align: left;">
+<h2><strong>• S U P P L I E S •</strong></h2>
+</p>
+
+<div class="listmenu">
+<h2>
+<ul>
+<li><a href="http://mindflexgames.com/">Mind Flex Head Wear</a></li>
+<li>AAA Batteris </li>
+<li>Solder</li>
+<li>Electrical Wire</li>
+<li>Wire Cutters</li>
+<li><a href="https://www.sparkfun.com/products/9950">Arduino uno</a></li>
+<li><a href="https://www.sparkfun.com/products/204">SD Card Reader</a></li>
+<li>Thread (optional)</li>
+<li>Double Sided Tape(optional) </li>
+</ul>
+</h2> 
+</div>
+
+<h3><p>Step One</p></h3>
+
+<p><h2> You've ordered your Mindflex and are waiting for it in the mail! You might want to play with it first because after that it might not work as a game! 
+ Once you have the headgear out it go look at the two white sides of the headgear. One of them will have a switch and the other will be completely enclosed unscrew the enclosure to reveal a chip that looks like this.</h2></p>
+
+<div class="img">
+   <img src="images/open.jpg" width="260px" alt ="plants" align="middle"></div>
+   
+   <p><h2> If you want cut open the black fabric to remove the sensor. Then solder a new wire from the T pin shown below. This will be used to connect to the arduino. </h2></p>
+   
+   <div class="section black" id="section4">
+	          <div class="img">
+   <img src="images/cut.jpg" width="260px" alt ="cut" align="middle"></div>
+	        </div>
+	        </div>
+	        
+	        <div class="section black" id="section3">
+	            <img src="images/.jpg" alt="cut" width="960px"/>
+	        </div>
+	        
+	        
+	        <div class="section black" id="section4">
+	          <div class="img">
+   <img src="images/sd.jpeg" width="260px" alt ="sd" align="middle"></div>
+	        </div>
+	        </div>
+        </div>
+        
+        
+     <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('ul.nav a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                    $("#content-wrapper").animate({opacity:1.0,top:"0px",left:"0px"},800);
+
+                });
+            });
+        </script>
+        
+        
+    
+    </body>
+ </html>
